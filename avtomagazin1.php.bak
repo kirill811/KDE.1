@@ -34,7 +34,7 @@ FROM `model avto`
     ON `model avto`.id_korobka = korobka.id_korobka
   INNER JOIN obivka
     ON `model avto`.id_odivka = obivka.id_obivka
-WHERE obivka.obivka = '$_GET[NameColor]'");
+WHERE obivka.obivka = '$_GET[NameObivka]'");
 $rows=mysqli_fetch_all($result,MYSQLI_ASSOC);
 echo '<table border="1">';
 echo '<tr>';

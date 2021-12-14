@@ -2,18 +2,7 @@
 require_once'lql.php';
 ?>
 <form action="avtomagazin2.php" method="GET">
- Номер машины:<select name="NameKorobka">
- <?php
-$result=mysqli_query($link,"SELECT
-  korobka.korobka
-FROM korobka");
-$rows=mysqli_fetch_all($result,MYSQLI_ASSOC);
-foreach ($rows as $row)
-{
-	echo"<option>". ($row['korobka']."</option>");
-}
-?>
- </select><br>
+ Коробка:<input type="text" name="NameKorobka"><br>
 <input type="submit" name="submit" value="Поиск"><br>
 </form>
 <?php
@@ -42,16 +31,18 @@ echo '<th>'."Дата заказа".'</th>';
 echo '</tr>';
 foreach ($rows as $row)
 {
-	
-
 	echo '<tr>';
-		echo '<td>'.$row['model'].'</td>';
+	echo '<td>'.$row['model'].'</td>';
 	echo '<td>'.$row['id_zokoz'].'</td>';
 	echo '<td>'.$row['ФИО'].'</td>';
 	echo '<td>'.$row['Адрес заказа'].'</td>';
 	echo '<td>'.$row['Дата заказа'].'</td>';
 	echo '</tr>';
-	
+
 }
+echo '</table>';
 }
 ?>
+<form method="post" action="http://kde/avtomagazin5.php">
+<input type="submit" name="submitButton" value="Меню" />
+</form>

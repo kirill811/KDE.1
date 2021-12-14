@@ -41,6 +41,7 @@ echo '<tr>';
 echo '<th>'."Номер заказа".'</th>';
 echo '<th>'."ФИО".'</th>';
 echo '<th>'."Дата заказа".'</th>';
+echo '<th>'."Модель".'</th>';
 echo '<th>'."Адрес заказа".'</th>';
 echo '</tr>';
 foreach ($rows as $row)
@@ -58,3 +59,6 @@ foreach ($rows as $row)
 }
 }
 ?>
+<form method="post" action="http://kde/avtomagazin5.php">
+<input type="submit" name="submitButton" value="Меню" />.
+</form>

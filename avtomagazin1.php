@@ -59,3 +59,6 @@ foreach ($rows as $row)
 }
 }
 ?>
+<form method="post" action="http://kde/avtomagazin5.php">
+<input type="submit" name="submitButton" value="Меню" />
+</form>
